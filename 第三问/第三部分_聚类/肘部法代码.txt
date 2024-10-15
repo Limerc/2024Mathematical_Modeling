@@ -1,0 +1,31 @@
+# The data seems to have quantitative variables that can be used for clustering.
+# I will apply K-Means clustering on the relevant numerical columns '亩产量斤', '种植成本(元亩)', '销售单价中间值', '预期销售量'
+import pandas as pd
+from sklearn.preprocessing import StandardScaler
+from sklearn.cluster import KMeans
+import matplotlib.pyplot as plt
+plt.rcParams['font.sans-serif'] = ['SimHei']  # 使用黑体
+plt.rcParams['axes.unicode_minus'] = False  # 解决负号显示问题
+
+data = pd.read_excel('CUsers26962PycharmProjectsMathdata2附件2作物信息汇总.xlsx')
+# Selecting the relevant columns for clustering
+features = data[['亩产量斤', '种植成本(元亩)', '销售单价中间值', '预期销售量']]
+
+# Standardize the features
+scaler = StandardScaler()
+scaled_features = scaler.fit_transform(features)
+
+# Use the elbow method to determine the optimal number of clusters
+inertia = []
+for k in range(1, 11)
+    kmeans = KMeans(n_clusters=k, random_state=42)
+    kmeans.fit(scaled_features)
+    inertia.append(kmeans.inertia_)
+
+# Plot the elbow curve
+plt.figure(figsize=(8, 6))
+plt.plot(range(1, 11), inertia, marker='o')
+plt.title('Elbow Method For Optimal K')
+plt.xlabel('Number of clusters')
+plt.ylabel('Inertia')
+plt.show()

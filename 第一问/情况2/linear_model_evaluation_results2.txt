@@ -1,0 +1,46 @@
+Status: Optimal
+Annual Profits: [4898159.066663, 4193882.441698, 4789025.791663, 4328438.066692799, 4761884.941663, 4245860.8916875, 4873247.066663]
+Total Linear Profit over 6 years: 32431987.666730296
+Annual Profit Standard Deviation: 289797.75915018603
+Year 1, Quarter 1, Land Utilization Rate: 1.0000
+Year 1, Quarter 1, Waste Rate: 0.0000%
+Year 1, Quarter 1, Discount Rate: 8.4281%
+Year 1, Quarter 2, Land Utilization Rate: 1.0000
+Year 1, Quarter 2, Waste Rate: 0.0000%
+Year 1, Quarter 2, Discount Rate: 5.5569%
+Year 2, Quarter 1, Land Utilization Rate: 1.0000
+Year 2, Quarter 1, Waste Rate: 0.0000%
+Year 2, Quarter 1, Discount Rate: 7.4702%
+Year 2, Quarter 2, Land Utilization Rate: 1.0000
+Year 2, Quarter 2, Waste Rate: 0.0000%
+Year 2, Quarter 2, Discount Rate: 2.5023%
+Year 3, Quarter 1, Land Utilization Rate: 1.0000
+Year 3, Quarter 1, Waste Rate: 0.0000%
+Year 3, Quarter 1, Discount Rate: 13.5804%
+Year 3, Quarter 2, Land Utilization Rate: 1.0000
+Year 3, Quarter 2, Waste Rate: 0.0000%
+Year 3, Quarter 2, Discount Rate: 4.9721%
+Year 4, Quarter 1, Land Utilization Rate: 1.0000
+Year 4, Quarter 1, Waste Rate: 0.0000%
+Year 4, Quarter 1, Discount Rate: 11.7465%
+Year 4, Quarter 2, Land Utilization Rate: 1.0000
+Year 4, Quarter 2, Waste Rate: 0.0000%
+Year 4, Quarter 2, Discount Rate: 2.8859%
+Year 5, Quarter 1, Land Utilization Rate: 1.0000
+Year 5, Quarter 1, Waste Rate: 0.0000%
+Year 5, Quarter 1, Discount Rate: 13.3170%
+Year 5, Quarter 2, Land Utilization Rate: 1.0000
+Year 5, Quarter 2, Waste Rate: 0.0000%
+Year 5, Quarter 2, Discount Rate: 5.3869%
+Year 6, Quarter 1, Land Utilization Rate: 1.0000
+Year 6, Quarter 1, Waste Rate: 0.0000%
+Year 6, Quarter 1, Discount Rate: 6.2385%
+Year 6, Quarter 2, Land Utilization Rate: 1.0000
+Year 6, Quarter 2, Waste Rate: 0.0000%
+Year 6, Quarter 2, Discount Rate: 2.6485%
+Year 7, Quarter 1, Land Utilization Rate: 1.0000
+Year 7, Quarter 1, Waste Rate: 0.0000%
+Year 7, Quarter 1, Discount Rate: 8.1372%
+Year 7, Quarter 2, Land Utilization Rate: 1.0000
+Year 7, Quarter 2, Waste Rate: 0.0000%
+Year 7, Quarter 2, Discount Rate: 5.2845%

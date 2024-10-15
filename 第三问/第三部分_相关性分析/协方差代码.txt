@@ -1,0 +1,19 @@
+import pandas as pd
+import numpy as np
+
+# 读取数据
+data = pd.read_excel('C:/Users/26962/PycharmProjects/Math/data2/附件2作物信息汇总.xlsx')
+
+# 提取自变量（销售单价中间值、种植成本）和因变量（预期销售量）
+variables = data[['销售单价中间值', '种植成本/(元/亩)', '预期销售量']]
+
+# 计算协方差矩阵
+cov_matrix = np.cov(variables.T)
+
+# 显示协方差矩阵
+cov_df = pd.DataFrame(cov_matrix, index=['销售单价中间值', '种植成本/(元/亩)', '预期销售量'],
+                      columns=['销售单价中间值', '种植成本/(元/亩)', '预期销售量'])
+
+print("协方差矩阵：")
+cov_df.to_excel('C:/Users/26962/PycharmProjects/Math/offical/第三问/XIE.xlsx')
+print(cov_df)

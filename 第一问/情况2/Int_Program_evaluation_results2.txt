@@ -1,0 +1,9 @@
+Total Profit: 17573481.25
+Annual Profits: [2530278.75, 2502093.125, 2474852.5, 2520622.5, 2507625.625, 2488407.5, 2549601.25]
+Annual Profit Standard Deviation: 23483.52629445962
+Waste Yield Rate: 0
+Discount Sales Rate: 0
+Land Utilization Rate: 1.0
+Crop Diversity Score: 1.0
+Crop Suitability Match Rate: 1.0
+Bean Planting Frequency: 0.3131868131868132

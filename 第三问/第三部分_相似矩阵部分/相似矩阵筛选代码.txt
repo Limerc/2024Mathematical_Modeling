@@ -1,0 +1,33 @@
+import pandas as pd
+from sklearn.metrics.pairwise import cosine_similarity
+
+# 假设我们已经读取了相似度数据并进行了余弦相似度计算
+# similarity_data 为包含相似度矩阵的 DataFrame
+
+# 1. 设置相似度的阈值，例如 0.8
+similarity_threshold = 0.8
+
+# 2. 初始化一个列表，用于存储相似度接近的作物对
+similar_pairs = []
+
+# 3. 遍历相似度矩阵，找到符合相似度条件的作物对
+for i in range(similarity_data.shape[0]):
+    for j in range(i + 1, similarity_data.shape[1]):
+        # 比较相似度值是否高于阈值
+        similarity_value = similarity_data.iloc[i, j]
+        if similarity_value >= similarity_threshold:
+            crop1 = similarity_data.iloc[i, 0]  # 获取第一作物名称
+            crop2 = similarity_data.columns[j]  # 获取第二作物名称
+            similar_pairs.append((crop1, crop2, similarity_value))
+
+# 4. 将结果转化为 DataFrame
+similar_pairs_df = pd.DataFrame(similar_pairs, columns=['作物1', '作物2', '相似度'])
+
+# 5. 过滤掉作物A和作物B相同的情况
+filtered_similar_pairs = similar_pairs_df[similar_pairs_df['作物1'] != similar_pairs_df['作物2']]
+
+# 6. 将过滤后的结果保存为Excel文件
+output_file_path = '/mnt/data/高相似度作物对_过滤.xlsx'
+filtered_similar_pairs.to_excel(output_file_path, index=False)
+
+print(f"结果已保存为 {output_file_path}")

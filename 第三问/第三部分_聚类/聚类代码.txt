@@ -1,0 +1,42 @@
+import pandas as pd
+from sklearn.cluster import KMeans
+import matplotlib.pyplot as plt
+from sklearn.preprocessing import StandardScaler
+
+# 读取 Excel 文件
+df_final = pd.read_excel('C:/Users/26962/PycharmProjects/Math/data2/作物信息汇总表_新.xlsx')
+
+# 选择用于聚类的特征列：'亩产量/斤', '种植成本/(元/亩)', '销售单价中间值', '预期销售量'
+features = df_final[['亩产量/斤', '种植成本/(元/亩)', '销售单价中间值', '预期销售量']]
+
+# 数据标准化
+scaler = StandardScaler()
+scaled_features = scaler.fit_transform(features)
+
+# 使用 KMeans 进行聚类分析，假设我们要分成 4 个类，可以调整 n_clusters 的值
+kmeans = KMeans(n_clusters=4, random_state=42)
+df_final['Cluster'] = kmeans.fit_predict(scaled_features)
+
+# 输出每个聚类中的作物编号和作物名称
+clustered_crops = df_final[['作物编号', '作物名称', 'Cluster']].groupby('Cluster')
+
+# 打印每个类中的作物编号和名称
+for cluster_num, group in clustered_crops:
+    print(f"\nCluster {cluster_num}:")
+    print(group[['作物编号', '作物名称']])
+
+# 可视化聚类结果（例如亩产量/斤和预期销售量的关系）
+plt.figure(figsize=(10, 6))
+plt.scatter(df_final['亩产量/斤'], df_final['预期销售量'], c=df_final['Cluster'], cmap='viridis', s=100)
+plt.title('作物聚类分析图')
+plt.xlabel('亩产量/斤')
+plt.ylabel('预期销售量')
+plt.colorbar(label='Cluster')
+plt.show()
+
+# 保存带有聚类标签的数据
+output_clustered_file_path = 'C:/Users/26962/PycharmProjects/Math/data2/final_crop_data_with_clusters.xlsx'
+df_final.to_excel(output_clustered_file_path, index=False)
+
+# 打印保存文件路径
+print(f"Clustered data saved to: {output_clustered_file_path}")

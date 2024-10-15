@@ -1,0 +1,40 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+plt.rcParams['font.sans-serif'] = ['SimHei']  # 使用黑体
+plt.rcParams['axes.unicode_minus'] = False  # 解决负号显示问题
+# 读取Excel文件中的数据
+file_path = 'C:/Users/26962/PycharmProjects/Math/data2/相关.xlsx'
+data = pd.read_excel(file_path, sheet_name='Sheet1')
+
+# 检查数据的统计特征
+print(data.describe())
+
+# 使用IQR（四分位距）方法检测并去除种植成本/(元/亩)的异常值
+Q1_cost = data['种植成本/(元/亩)'].quantile(0.25)
+Q3_cost = data['种植成本/(元/亩)'].quantile(0.75)
+IQR_cost = Q3_cost - Q1_cost
+
+# 定义异常值的上下限
+lower_bound_cost = Q1_cost - 1.5 * IQR_cost
+upper_bound_cost = Q3_cost + 1.5 * IQR_cost
+
+# 过滤掉异常值
+filtered_data_cost = data[(data['种植成本/(元/亩)'] >= lower_bound_cost) & (data['种植成本/(元/亩)'] <= upper_bound_cost)]
+
+# 去除异常值后的相关性分析
+filtered_cost_correlation = filtered_data_cost[['种植成本/(元/亩)', '预期销售量']].corr()
+print("去除异常值后的相关性：\n", filtered_cost_correlation)
+
+# 可视化种植成本/(元/亩)与预期销售量的关系
+plt.figure(figsize=(8,6))
+sns.regplot(x='种植成本/(元/亩)', y='预期销售量', data=filtered_data_cost, scatter_kws={'color':'green'}, line_kws={'color':'orange'})
+
+# 设置标题和标签
+plt.title('种植成本/(元/亩) vs 预期销售量 (去除异常值)', fontsize=14)
+plt.xlabel('种植成本/(元/亩)', fontsize=12)
+plt.ylabel('预期销售量', fontsize=12)
+
+# 显示图表
+plt.show()

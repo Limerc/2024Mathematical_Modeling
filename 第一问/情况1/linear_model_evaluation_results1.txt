@@ -1,0 +1,46 @@
+Status: Optimal
+Annual Profits: [3381906.0001375997, 3362784.0833385, 3357943.0908166002, 3381927.6667506997, 3362850.8833529996, 3357943.0914931996, 3381927.6667662]
+Total Linear Profit over 6 years: 23764311.6549067
+Annual Profit Standard Deviation: 10817.669051708353
+Year 1, Quarter 1, Land Utilization Rate: 0.9901
+Year 1, Quarter 1, Waste Rate: -0.0000%
+Year 1, Quarter 1, Discount Rate: 0.0000%
+Year 1, Quarter 2, Land Utilization Rate: 0.9950
+Year 1, Quarter 2, Waste Rate: -0.0000%
+Year 1, Quarter 2, Discount Rate: 0.0000%
+Year 2, Quarter 1, Land Utilization Rate: 0.9851
+Year 2, Quarter 1, Waste Rate: 0.2982%
+Year 2, Quarter 1, Discount Rate: 0.0000%
+Year 2, Quarter 2, Land Utilization Rate: 0.9950
+Year 2, Quarter 2, Waste Rate: 0.1257%
+Year 2, Quarter 2, Discount Rate: 0.0000%
+Year 3, Quarter 1, Land Utilization Rate: 0.9901
+Year 3, Quarter 1, Waste Rate: 0.3000%
+Year 3, Quarter 1, Discount Rate: 0.0000%
+Year 3, Quarter 2, Land Utilization Rate: 0.9950
+Year 3, Quarter 2, Waste Rate: 0.1318%
+Year 3, Quarter 2, Discount Rate: 0.0000%
+Year 4, Quarter 1, Land Utilization Rate: 0.9901
+Year 4, Quarter 1, Waste Rate: -0.0000%
+Year 4, Quarter 1, Discount Rate: 0.0000%
+Year 4, Quarter 2, Land Utilization Rate: 1.0000
+Year 4, Quarter 2, Waste Rate: -0.0000%
+Year 4, Quarter 2, Discount Rate: 0.0000%
+Year 5, Quarter 1, Land Utilization Rate: 0.9901
+Year 5, Quarter 1, Waste Rate: 0.2604%
+Year 5, Quarter 1, Discount Rate: 0.0000%
+Year 5, Quarter 2, Land Utilization Rate: 0.9851
+Year 5, Quarter 2, Waste Rate: 0.1397%
+Year 5, Quarter 2, Discount Rate: 0.0000%
+Year 6, Quarter 1, Land Utilization Rate: 0.9901
+Year 6, Quarter 1, Waste Rate: 0.3831%
+Year 6, Quarter 1, Discount Rate: 0.0000%
+Year 6, Quarter 2, Land Utilization Rate: 1.0000
+Year 6, Quarter 2, Waste Rate: 0.1671%
+Year 6, Quarter 2, Discount Rate: 0.0000%
+Year 7, Quarter 1, Land Utilization Rate: 0.9901
+Year 7, Quarter 1, Waste Rate: -0.0000%
+Year 7, Quarter 1, Discount Rate: 0.0000%
+Year 7, Quarter 2, Land Utilization Rate: 0.9901
+Year 7, Quarter 2, Waste Rate: -0.0000%
+Year 7, Quarter 2, Discount Rate: 0.0000%
